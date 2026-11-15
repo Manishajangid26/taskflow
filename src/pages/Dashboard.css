@@ -1,0 +1,208 @@
+/* ================= DASHBOARD LAYOUT & SHELL ================= */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.dashboard-main-wrapper {
+  margin-left: 265px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Force Sidebar Clickability Above All Layers */
+.tf-sidebar {
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+
+/* ================= WELCOME HERO BANNER ================= */
+.dashboard-welcome-banner {
+  background: linear-gradient(120deg, #0f172a 0%, #312e81 55%, #4f46e5 100%);
+  box-shadow: 0 14px 30px -8px rgba(79, 70, 229, 0.35);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-welcome-banner::after {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.banner-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 10px;
+  backdrop-filter: blur(6px);
+}
+
+.banner-kanban-btn {
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.banner-kanban-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #4f46e5;
+}
+
+/* ================= KPI STAT CARDS ================= */
+.dash-stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  height: 100%;
+}
+
+.dash-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -4px rgba(79, 70, 229, 0.14);
+  border-color: #c7d2fe;
+}
+
+.dash-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-stat-icon.indigo { background: #eef2ff; color: #4f46e5; }
+.dash-stat-icon.amber  { background: #fffbeb; color: #f59e0b; }
+.dash-stat-icon.emerald { background: #ecfdf5; color: #10b981; }
+.dash-stat-icon.sky    { background: #f0f9ff; color: #0ea5e9; }
+
+.dash-trend-badge {
+  background: #f8fafc;
+  color: #10b981;
+  border: 1px solid #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ================= CHARTS & PANELS ================= */
+.dash-panel-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  height: 100%;
+}
+
+.dash-live-pill {
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ================= PROJECT & TASK LIST ITEMS ================= */
+.dash-project-item {
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.dash-project-item:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.dash-progress-track {
+  height: 7px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.dash-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.dash-task-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.dash-task-row:hover {
+  border-color: #c7d2fe;
+  transform: translateX(3px);
+}
+
+.dash-status-btn {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.dash-status-btn:hover {
+  transform: scale(1.05);
+}
+
+.dash-status-btn.completed { background: #dcfce7; color: #15803d; }
+.dash-status-btn.progress  { background: #e0e7ff; color: #4338ca; }
+.dash-status-btn.todo      { background: #fef3c7; color: #b45309; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 991px) {
+  .dashboard-main-wrapper {
+    margin-left: 0;
+  }
+}

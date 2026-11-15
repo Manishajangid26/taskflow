@@ -1,0 +1,145 @@
+/* ================= PROFILE & SETTINGS PAGE ================= */
+.set-profile-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+}
+
+.set-cover-banner {
+  height: 115px;
+  background: linear-gradient(120deg, #0f172a 0%, #312e81 55%, #4f46e5 100%);
+  position: relative;
+}
+
+.set-avatar-wrapper {
+  width: 86px;
+  height: 86px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #4f46e5, #0ea5e9);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.25);
+  margin-top: -43px;
+  position: relative;
+  z-index: 2;
+}
+
+.set-panel-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.6rem;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+}
+
+/* ================= STACKED THEME OPTION CARDS ================= */
+.theme-option-box {
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.35rem 1.3rem;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  background: #f8fafc;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.theme-option-box:hover {
+  border-color: #818cf8;
+  transform: translateY(-2px);
+}
+
+.theme-option-box.active-theme {
+  border-color: #4f46e5;
+  background: rgba(79, 70, 229, 0.08);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.14);
+}
+
+.theme-preview-bar {
+  height: 42px;
+  border-radius: 10px;
+  margin-top: 12px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.light-preview {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.dark-preview {
+  background: #0f172a;
+  border: 1px solid #334155;
+}
+
+.preview-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.set-pref-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.set-pref-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.set-switch {
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.set-danger-box {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+/* ================= SETTINGS DARK MODE OVERRIDES ================= */
+body[data-theme='dark'] .set-profile-card,
+body[data-theme='dark'] .set-panel-card {
+  background-color: #111827 !important;
+  border-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+body[data-theme='dark'] .theme-option-box {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+body[data-theme='dark'] .theme-option-box.active-theme {
+  background-color: rgba(79, 70, 229, 0.25) !important;
+  border-color: #6366f1 !important;
+}
+
+body[data-theme='dark'] .set-pref-row {
+  border-bottom-color: #1e293b !important;
+}
+
+body[data-theme='dark'] .set-danger-box {
+  background-color: rgba(225, 29, 72, 0.12) !important;
+  border-color: rgba(244, 63, 94, 0.3) !important;
+}
